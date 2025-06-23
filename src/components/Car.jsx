@@ -72,7 +72,8 @@ const Car = forwardRef((props, ref) => {
 
   return (
     <group ref={carRef} dispose={null}>
-      <primitive object={gltf.scene} scale={1.5} rotation={[0, Math.PI / 2, 0]} />
+      {/* Rotate the car 180 degrees to face forward */}
+      <primitive object={gltf.scene} scale={1.5} rotation={[0, Math.PI, 0]} />
     </group>
   );
 });
